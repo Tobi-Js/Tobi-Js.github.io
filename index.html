@@ -4,7 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAD | Bike Service</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --gold: #d4a857;
+            --black: #0e0e0e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--gold);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background-color: var(--black);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        .hero {
+            text-align: left;
+            padding: 4rem 2rem;
+            background-image: url('https://images.unsplash.com/photo-1610643832032-42c7c781f4c9');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 90vh;
+            background-color: var(--black);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 2rem;
+        }
+
+        .card {
+            background-color: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+            filter: brightness(0) saturate(100%) invert(78%) sepia(38%) saturate(307%) hue-rotate(358deg) brightness(98%) contrast(94%);
+        }
+
+        .card span {
+            font-size: 1rem;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,27 +119,24 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>BIKE SERVICE</h1>
-                <p>Saubere Reparatur<br>und Top Service</p>
-            </div>
-            <div class="services">
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3303/3303985.png" alt="Reparatur Icon">
-                    <span>Reparaturen</span>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" alt="Wartung Icon">
-                    <span>Wartung</span>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/893/893257.png" alt="Beratung Icon">
-                    <span>Beratung</span>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="hero">
+        <h1>BIKE SERVICE</h1>
+        <p>Saubere Reparatur<br>und Top Service</p>
+    </section>
+
+    <section class="services">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3303/3303985.png" alt="Reparaturen">
+            <span>REPARATUREN</span>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" alt="Wartung">
+            <span>WARTUNG</span>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/893/893257.png" alt="Beratung">
+            <span>BERATUNG</span>
+        </div>
+    </section>
 </body>
 </html>
