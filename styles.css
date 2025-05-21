@@ -1,39 +1,80 @@
-/* Allgemeine Stile */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-/* Header-Stile */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0e0e;
+    color: #d4a857;
+}
+
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #0e0e0e;
+    font-size: 1rem;
 }
 
-/* Abschnitts-Stile */
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #d4a857;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 2rem 2rem 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.card {
+    border: 1px solid #d4a857;
+    padding: 2rem;
+    width: 200px;
+    text-align: center;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #121212;
 }
 
-h2 {
-    color: #333;
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* Footer-Stile */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(38%) saturate(307%) hue-rotate(358deg) brightness(98%) contrast(94%);
+}
+
+.card span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
